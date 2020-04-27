@@ -8,9 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3.Зайти в терминале в папку проекта.   
 4.Установить зависимости командой:   
 `npm install`   
-5.Запустить nodejs-server с проектом:
-`npm run serve`
-6.Открыть в браузере проект по адресу : `localhost:4200`
+5.Запустить nodejs-server с проектом:   
+`npm run serve`   
+6.Открыть в браузере проект по адресу : `localhost:4200`   
 
 
 
