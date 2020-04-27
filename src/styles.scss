@@ -1,1 +1,474 @@
-/* You can add global styles to this file, and also import other style files */
+$color-1: #8a0;
+$color-2: #595;
+$color-3: #efa;
+$color-gray-light: #eee;
+$color-gray: #ccc;
+
+$color-text: #333;
+
+@import './assets/primeng-theme';
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-footer {
+  background-color: $color-2;
+  height: 4em;
+  margin-top: 2em;
+}
+
+.pool-form-tabs {
+  &__item {
+    display: block;
+    min-height: 200px;
+
+    &-parameters, &-respondents {
+      padding-top: 1em;
+    }
+  }
+}
+
+.page-mock {
+  border: 1px solid $color-1;
+  margin: 1em 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+
+  &__message {
+    font-size: 2em;
+  }
+
+  &__title {
+    font-size: 4em;
+    font-weight: bold;
+    color: $color-2;
+  }
+}
+
+.app-toolbar {
+  display: block;
+  width: 100%;
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.search-by-site {
+
+  &__icon {
+    color: #aaa;
+    position: relative;
+    right: 25px;
+    vertical-align: middle;
+
+  }
+}
+
+.logged-user {
+
+  padding: .4em;
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    padding: .2em;
+    border-radius: 30px;
+    background-color: #ddd;
+
+    img {
+      height: 50px;
+    }
+  }
+}
+
+.user-info {
+  color: #333;
+  padding: 0 .5em;
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__post {
+    font-size: .8em;
+  }
+}
+
+.app-logo {
+  .svg-logo {
+    height: 5em;
+  }
+
+  text-align: center;
+}
+
+.page-row {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.app-page {
+  margin-top: 80px;
+
+  .ui-tabview.ui-tabview-top {
+    .ui-tabview-nav {
+
+      border-bottom: 1px solid $color-1;
+      padding: .5em;
+
+      .ui-state-default {
+
+        text-align: center;
+
+        .ui-tabview-title {
+          color: #777;
+        }
+      }
+
+      .ui-state-active {
+        border-bottom: 2px solid $color-1;
+
+        .ui-tabview-title {
+          color: $color-2;
+        }
+      }
+    }
+  }
+}
+
+.ui-menuitem-link-active {
+  //background-color: lighten($color-1,8);
+  .ui-menuitem-text, .ui-menuitem-icon {
+    color: $color-1;
+  }
+}
+
+.ui-menuitem-link {
+  color: #79a;
+
+  &:hover {
+    color: darken(#79a, 20);
+  }
+}
+
+.ui-breadcrumb {
+  margin: 1em 0;
+}
+
+.pools-menu-actions {
+  .ui-menubar {
+    margin: 2em 0 0;
+
+    .ui-menubar-root-list {
+      display: flex;
+
+    }
+
+    .ui-menuitem {
+      margin-right: 1em;
+      flex: none;
+
+      .ui-menuitem-link {
+        background-color: lighten($color-2, 40);
+      }
+
+      .ui-menuitem-link.ui-menuitem-link-active {
+        background-color: $color-1;
+
+        .ui-menuitem-text {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.menu-main {
+
+  .ui-menuitem-link.ui-menuitem-link-active {
+    .ui-menuitem-icon {
+      color: $color-1;
+    }
+  }
+
+  .ui-menuitem-link {
+    text-align: center;
+
+    .ui-menuitem-text {
+      color: #484;
+    }
+
+    .ui-menuitem-icon {
+      display: block;
+      font-size: 6em;
+      color: #8a8;
+      margin-right: 0;
+
+      &:hover {
+        color: #464;
+      }
+    }
+  }
+
+}
+
+
+.form-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.parameter-add {
+  margin: 2em 0;
+  text-align: center;
+
+  .ui-button.ui-state-default.ui-button-secondary {
+    padding: 2em;
+    background-color: transparent;
+    color: $color-2;
+    border: 2px solid $color-gray;
+    width: 100%;
+    border-radius: .5em;
+
+    &:enabled:hover {
+      background-color: $color-3;
+      border-color: $color-1;
+    }
+  }
+
+  &__plus {
+    font-size: 2em;
+  }
+}
+
+.respondent-item {
+  display: block;
+  border: 1px solid $color-gray;
+  padding: 1em 1em 1em 2em;
+
+  &__condition {
+    .ui-button {
+      margin-left: 2em;
+    }
+  }
+
+  &__values {
+    margin-left: 2em;
+
+    .ui-fieldset-legend {
+      background-color: #eedddd;
+    }
+  }
+
+  &__value {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    position: relative;
+  }
+}
+
+.respondent-item-wrapper {
+  position: relative;
+
+}
+
+.condition-conjunction {
+
+
+  display: flex;
+  align-items: center;
+
+  &__label {
+    margin: 0 auto;
+    padding: .4em 1em;
+    border-radius: .5em;
+  }
+
+  &__line {
+    border-bottom: 1px solid $color-gray;
+    width: 100%;
+  }
+}
+
+.condition-conjunction-and {
+  position: absolute;
+  top: -1em;
+  left: 1em;
+
+  &__label {
+    background-color: #55e;
+    color: #fff;
+    padding: .4em 1em;
+  }
+}
+
+.condition-conjunction-or {
+  position: absolute;
+  top: -1.5em;
+  left: -5em;
+
+  &__label {
+    background-color: #eee;
+    padding: .4em 1em;
+  }
+}
+
+.form-item {
+  display: flex;
+  margin-bottom: 1em;
+
+  &__label {
+    font-weight: 700;
+    padding: 0 1em;
+    line-height: 2em;
+  }
+
+  &__input {
+    padding: 0 1em;
+  }
+
+  input {
+    &.ng-invalid {
+      box-shadow: 0 0 10px rgba(200, 0, 0, 0.6);
+      border: 1px solid rgba(200, 0, 0, 0.6)
+    }
+
+    &.ng-valid.ng-dirty {
+      box-shadow: 0 0 10px rgba(100, 200, 0, 0.6);
+      border: 1px solid rgba(100, 200, 0, 0.6)
+    }
+  }
+
+  &.ng-invalid {
+    &.ui-dropdown {
+      box-shadow: 0 0 10px rgba(200, 0, 0, 0.6);
+      border: 1px solid rgba(200, 0, 0, 0.6)
+    }
+
+  }
+
+  &.ng-valid.ng-dirty {
+    &.ui-dropdown {
+      box-shadow: 0 0 10px rgba(100, 200, 0, 0.6);
+      border: 1px solid rgba(100, 200, 0, 0.6)
+    }
+
+  }
+}
+
+.form-item-required {
+  label:after {
+    content: '*';
+    color: red;
+  }
+}
+
+.condition-values {
+  display: flex;
+  align-items: baseline;
+
+  &__item {
+    display: flex;
+    padding: 1em;
+  }
+
+  &__label {
+    line-height: 2em;
+  }
+}
+
+.ui-tabview-nav,
+.menu-bar ul {
+  display: flex;
+
+  li {
+    list-style: none;
+    flex: 1;
+  }
+}
+
+.columns-container {
+  display: flex;
+
+  &__column {
+    &-first {
+      width: 20%;
+    }
+
+    &-second {
+      width: 100%;
+    }
+  }
+}
+
+.pool-page-menu {
+  display: block;
+  border-bottom: 1px solid $color-1;
+
+  .nav-menu {
+    display: flex;
+
+    align-content: space-between;
+
+    &__item {
+      list-style: none;
+    }
+  }
+}
+
+.nav-menu-item {
+  &__link {
+    display: block;
+    padding: 1em;
+    color: $color-2;
+
+    &-active {
+      border-bottom: 3px solid $color-1;
+    }
+  }
+}
+
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+
+}
+
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
