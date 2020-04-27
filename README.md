@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
+## Тестовый запуск проекта
+1.Клонировать репозиторий проекта на локальный компьютер.   
+2.Установить Node.js и NPM [Инструкция](https://nodejs.org/ru/download/package-manager/)   
+3.Зайти в терминале в папку проекта.   
+4.Установить зависимости командой:   
+`npm install`   
+5.Запустить nodejs-server с проектом:
+`npm run serve`
+6.Открыть в браузере проект по адресу : `localhost:4200`
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
